@@ -12,6 +12,6 @@ Feature: Amazon Optimize Product Testing
     * Close the browser
 
     Examples:
-      |category  |product              |
-      |Automotive |car phone holder    |
-      |Baby       |baby shampoo dalin  |
+    |category   |product             |
+    |Automotive |car phone holder    |
+    |Baby       |baby shampoo dalin  |

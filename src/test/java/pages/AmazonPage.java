@@ -34,6 +34,7 @@ public class AmazonPage {
         select.selectByVisibleText(category);
     }
     public void wantedProductPrint(String product){
+
         searchBox.sendKeys(product + Keys.ENTER);
     }
 
@@ -54,7 +55,7 @@ public class AmazonPage {
             int numberOfReviews = Integer.parseInt(number.getText().replace(",", ""));
             int basePrice = Integer.parseInt(price.getText()); // 24
 
-            int result = (basePoint * numberOfReviews) - (basePrice * 300);
+            int result = (basePoint * numberOfReviews) - (basePrice * 100);
 
 
             if (result > highest) {
@@ -75,4 +76,5 @@ public class AmazonPage {
         System.out.println("Fiyat : "+bestProductPrice);
         System.out.println("Sayı : "+bestProductNumber);
     }
+
 }

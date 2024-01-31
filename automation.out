@@ -1,0 +1,12 @@
+2024-01-31 17:01:794 INFO  GoogleStepDef:49 - User goes to Google Url
+2024-01-31 17:01:886 INFO  AmazonStepDef:16 - Select the wanted category
+2024-01-31 17:01:680 INFO  AmazonStepDef:22 - Print that wanted product in search text box
+2024-01-31 17:01:237 INFO  AmazonStepDef:28 - Performs calculations to find the best product
+2024-01-31 17:01:709 INFO  AmazonStepDef:35 - Print that the best product to the console
+2024-01-31 17:01:709 INFO  GoogleStepDef:58 - Close the browser
+2024-01-31 17:01:471 INFO  GoogleStepDef:49 - User goes to Google Url
+2024-01-31 17:01:853 INFO  AmazonStepDef:16 - Select the wanted category
+2024-01-31 17:01:961 INFO  AmazonStepDef:22 - Print that wanted product in search text box
+2024-01-31 17:01:216 INFO  AmazonStepDef:28 - Performs calculations to find the best product
+2024-01-31 17:01:972 INFO  AmazonStepDef:35 - Print that the best product to the console
+2024-01-31 17:01:972 INFO  GoogleStepDef:58 - Close the browser

@@ -1,26 +1,26 @@
 package logger;
 
 import org.apache.log4j.Logger;
-import org.apache.log4j.xml.DOMConfigurator;
+import org.apache.log4j.PropertyConfigurator;
 
 public class Log {
 
-    static Logger logger = Logger.getLogger(Log.class);
+    private static boolean root=false;
 
-    public Log(){
-        DOMConfigurator.configure("log4j.xml");
+    public static Logger getLogger(Class cls){
+        if(root){
+            return Logger.getLogger(cls);
+        }
+        PropertyConfigurator.configure("log4j.properties");
+        root = true;
+        return Logger.getLogger(cls);
     }
 
-    public void info(String message){
-        logger.info(message);
-    }
+    public static void main(String[] args) {
+        Logger log = Log.getLogger(Log.class);
+        log.info("I am test");
+        log.info("I am test");
+        log.info("I am test");
 
-    public void warn(String message){
-        logger.warn(message);
     }
-
-    public void error(String message){
-        logger.error(message);
-    }
-
 }

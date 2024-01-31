@@ -25,12 +25,12 @@ public class Base {
             cap.setPlatform(Platform.ANY);
 
             ChromeOptions optionsChrome = new ChromeOptions();
-            optionsChrome.merge(cap); // merge methodunu kullanarak cap objemizi bir ChromeOptions haline getirdik.
+            optionsChrome.merge(cap);
         }
 
-        if (browser == "edge") {
+        if (browser == "firefox") {
 
-            cap.setBrowserName("edge");
+            cap.setBrowserName("firefox");
             cap.setPlatform(Platform.ANY);
 
             EdgeOptions optionsEdge = new EdgeOptions();

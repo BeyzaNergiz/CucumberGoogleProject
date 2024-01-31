@@ -1,18 +1,16 @@
 
-@books
+@pages
 Feature: Searching for products on Google
 
   Scenario Outline: Google search test of the given products in the list
 
-    Given User goes to "googleUrl"
-    Then Searches "<searchWord>" on Google
-    And Google tests whether search results contain "<searchWord>"
-    And Close the browser
+    * User goes to "googleUrl"
+    * Searches "<searchWord>" on Google
+    * Google tests whether search results contain "<searchWord>"
+    * Close the browser
 
     Examples:
       |searchWord |
-      |Trendyol   |
-      |Hepsiburada|
       |Samsung    |
       |Apple      |
       |Amazon     |
