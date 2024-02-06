@@ -11,11 +11,13 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
+import static utilities.Driver.driver;
+
 public class Base {
 
     DesiredCapabilities cap = new DesiredCapabilities();
 
-    static String hubURL = "http://192.168.1.36:4444";
+    static String hubURL = "http://192.168.1.36:4444/";
 
     public WebDriver setDriver(WebDriver driver, String browser) {
 
@@ -49,6 +51,13 @@ public class Base {
 
 
         return driver;
+    }
+
+    public static void quitDriver(){
+        if (driver != null){
+            driver.quit();
+            driver=null;
+        }
     }
 
 

@@ -1,6 +1,7 @@
 package pages;
 
 import io.cucumber.java.Before;
+import logger.Log;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
@@ -24,7 +25,7 @@ public class ApplePage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    public static Logger logger = LogManager.getLogger(ApplePage.class);
+
 
     @FindBy (xpath = "//*[@id='globalnav-list']")
     List<WebElement> headerElements;

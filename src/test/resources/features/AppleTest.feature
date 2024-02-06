@@ -1,6 +1,6 @@
-  @wip
-  Feature: Searching for headers on Apple home page
 
+  Feature: Searching for headers on Apple home page
+    @wip
     Scenario Outline: Headers display test on Apple home page
 
       * User goes to "googleUrl"

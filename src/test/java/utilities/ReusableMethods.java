@@ -33,9 +33,7 @@ public class ReusableMethods {
         js.executeScript("arguments[0].setAttribute('style', 'border: 2px solid red;');", element);
     }
     public static void tumSayfaFotografCek(String resimAdi){
-        // her screenshot'in benzersiz bir isme sahip olmasi icin
-        // 1- method'un cagrildigi yerden resim adi yollanacak
-        // 2- sonuna tarih etiketi ekleyelim 2310062013
+
         LocalDateTime ldt = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyMMddHHmm");
         String tarihEtiketi = ldt.format(formatter);
@@ -51,9 +49,7 @@ public class ReusableMethods {
         }
     }
     public static void webElementFotografCek(WebElement webElement, String resimAdi){
-        // her screenshot'in benzersiz bir isme sahip olmasi icin
-        // 1- method'un cagrildigi yerden resim adi yollanacak
-        // 2- sonuna tarih etiketi ekleyelim 2310062013
+
         LocalDateTime ldt = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyMMddHHmm");
         String tarihEtiketi = ldt.format(formatter);

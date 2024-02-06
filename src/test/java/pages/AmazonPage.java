@@ -44,16 +44,16 @@ public class AmazonPage {
         for (WebElement product : allProduct) {
 
             WebElement name = product.findElement(By.xpath("//span[@class='a-size-base-plus a-color-base a-text-normal']"));
-            WebElement price = product.findElement(By.xpath("//span[@class='a-price-whole']")); // "24"
+            WebElement price = product.findElement(By.xpath("//span[@class='a-price-whole']"));
             WebElement point = product.findElement(By.cssSelector("[aria-label~='stars']"));
             WebElement number = product.findElement(By.xpath("//span[@class='a-size-base s-underline-text']"));
 
 
             // 4.4 out of 5 stars
             String findPoint[] = point.getAttribute("aria-label").split(" out");
-            int basePoint = (int) Float.parseFloat(findPoint[0]); // 4
+            int basePoint = (int) Float.parseFloat(findPoint[0]);
             int numberOfReviews = Integer.parseInt(number.getText().replace(",", ""));
-            int basePrice = Integer.parseInt(price.getText()); // 24
+            int basePrice = Integer.parseInt(price.getText());
 
             int result = (basePoint * numberOfReviews) - (basePrice * 100);
 

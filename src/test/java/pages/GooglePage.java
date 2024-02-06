@@ -21,13 +21,13 @@ public class GooglePage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    public static Logger logger = LogManager.getLogger(GooglePage.class);
-    @FindBy(xpath = "//*[@type='search']")
+
+    @FindBy(xpath = "//*[@role='combobox']")
     public WebElement googleSearchBox;
 
     public void searchesGoogle(String searchWord){
 
-        logger.info("Clicks on Apple web site");
+
         highlightElement(Driver.getDriver(), googleSearchBox);
         googleSearchBox.click();
         googleSearchBox.sendKeys(searchWord+ Keys.ENTER);

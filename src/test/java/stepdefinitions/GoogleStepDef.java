@@ -12,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import pages.GooglePage;
+import utilities.Base;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -22,6 +23,8 @@ import java.net.URL;
 public class GoogleStepDef {
 
     GooglePage googlePage = new GooglePage();
+    WebDriver driver;
+    Base base = new Base();
 
     Logger log = Log.getLogger(GoogleStepDef.class);
 
@@ -47,6 +50,7 @@ public class GoogleStepDef {
     public void kullaniciAnasayfayaGider(String url) {
 
        log.info("User goes to Url");
+        driver = base.setDriver(driver,"chrome");
         Driver.getDriver().get(ConfigReader.getProperty(url));
 
 
@@ -56,7 +60,7 @@ public class GoogleStepDef {
     public void sayfayiKapatir() {
 
        log.info("Close the browser");
-        Driver.quitDriver();
+        Base.quitDriver();
     }
 
 
